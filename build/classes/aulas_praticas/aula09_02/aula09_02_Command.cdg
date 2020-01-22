@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula09_02_Command">
+  <ClassDiagramComponents>
+    <Class name="Main" package="aula09_02_Command" visibility="public" xPosition="20.0" yPosition="36.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RemoveCommand" package="aula09_02_Command" visibility="public" xPosition="276.0" yPosition="462.0">
+      <Fields>
+        <Field name="collection" type="Collection&lt;T&gt;" visibility="private"/>
+        <Field name="element" type="T" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Collection&lt;T&gt;" name="collection"/>
+          <Argument type="T" name="element"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public"/>
+        <Method name="undo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AddCommand" package="aula09_02_Command" visibility="public" xPosition="288.0" yPosition="36.0">
+      <Fields>
+        <Field name="collection" type="Collection&lt;T&gt;" visibility="private"/>
+        <Field name="element" type="T" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Collection&lt;T&gt;" name="collection"/>
+          <Argument type="T" name="element"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public"/>
+        <Method name="undo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CollectionUndo" package="aula09_02_Command" visibility="public" xPosition="16.0" yPosition="250.0">
+      <Fields>
+        <Field name="command" type="Stack&lt;Command&gt;" visibility="private"/>
+        <Field name="undo" type="Command" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="undo" returnType="void" visibility="public"/>
+        <Method name="setCommand" returnType="void" visibility="public">
+          <Argument type="Command" name="c"/>
+        </Method>
+        <Method name="doCommand" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Command" package="aula09_02_Command" visibility="public" xPosition="385.0" yPosition="282.0">
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public"/>
+        <Method name="undo" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="undo" source="aula09_02_Command.CollectionUndo" target="aula09_02_Command.Command" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula09_02_Command.AddCommand" target="aula09_02_Command.Command"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula09_02_Command.RemoveCommand" target="aula09_02_Command.Command"/>
+    <HasRelation name="command" source="aula09_02_Command.CollectionUndo" target="aula09_02_Command.Command" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula09_02_Command.CollectionUndo" target="aula09_02_Command.Command" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

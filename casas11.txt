@@ -1,0 +1,6 @@
+
+Alínea a) ----------------------------------
+
+Ref: N506 - Apartamento[tipo=T3, descricao=Vagos, preco=185.0]
+Ref: A501 - Moradia[tipo=T4, descricao=Costa Nova, preco=445.0], info=null
+Ref: W505 - Apartamento[tipo=T2, descricao=Vera Cruz, preco=210.0]

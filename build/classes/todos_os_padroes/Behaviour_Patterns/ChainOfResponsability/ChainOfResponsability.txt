@@ -1,0 +1,15 @@
+-> Forma uma cadeia de recetores e passa um pedido por estes.
+-> Permite dar a chance a mais de um objeto a responder ou a colaborar na resposta.
+-> Os componentes são colocados em cadeia na ordem filho -> Pai
+	- se o filho não coseguir ajudar este delega o pai e assim sucessivamente.
+
+-> Usar padrão:
+	-> Mais de um objeto pode responder a um pedido e:
+		- não se quer especificar o recetor explicitamente
+		- os objetos são especificados dinamicamente
+
+-> Vantagens:
+	-> Baixo acoplamento: Não se sabe a classe ou estrutura interna dos participantes.
+	-> delegação de responsabilidades
+	-> Garantia de resposta
+	-> Não utiliza  identidade de objetos

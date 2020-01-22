@@ -1,0 +1,11 @@
+-> Acessa aos elementos de um conjunto em sequência sem expor a representação interna deste conjunto.
+-> Fornece acesso a sequencial aos elementos, independentemente da coleção.
+
+Usar padrão:
+	-> quando se pretende acessar a objetos agregados sem expor a estrutura interna.
+	-> promove diferentes meios de acessar tais objetos. 
+	-> especifica um interface única e uniforme para este acesso.
+
+Vantagens:
+	-> Multiplas formas de acesso: Implementar um novo iterator com uma nova logica de acesso
+	-> Interface simplificada: Acesso simples e uniforme

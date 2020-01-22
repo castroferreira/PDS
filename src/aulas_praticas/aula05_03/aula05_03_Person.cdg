@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula05_03_Person">
+  <ClassDiagramComponents>
+    <Class name="Person" package="aula05_03_Person" visibility="public" xPosition="8.0" yPosition="162.0">
+      <Fields>
+        <Field name="lastName" type="String" visibility="private" isFinal="true"/>
+        <Field name="firstName" type="String" visibility="private" isFinal="true"/>
+        <Field name="middleName" type="String" visibility="private" isFinal="true"/>
+        <Field name="salutation" type="String" visibility="private" isFinal="true"/>
+        <Field name="suffix" type="String" visibility="private" isFinal="true"/>
+        <Field name="streetAddress" type="String" visibility="private" isFinal="true"/>
+        <Field name="city" type="String" visibility="private" isFinal="true"/>
+        <Field name="state" type="String" visibility="private" isFinal="true"/>
+        <Field name="isFemale" type="boolean" visibility="private" isFinal="true"/>
+        <Field name="isEmployed" type="boolean" visibility="private" isFinal="true"/>
+        <Field name="isHomeOwner" type="boolean" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="newLastName"/>
+          <Argument type="String" name="newFirstName"/>
+          <Argument type="String" name="newMiddleName"/>
+          <Argument type="String" name="newSalutation"/>
+          <Argument type="String" name="newSuffix"/>
+          <Argument type="String" name="newStreetAddress"/>
+          <Argument type="String" name="newCity"/>
+          <Argument type="String" name="newState"/>
+          <Argument type="boolean" name="newIsFemale"/>
+          <Argument type="boolean" name="newIsEmployed"/>
+          <Argument type="boolean" name="newIsHomeOwner"/>
+        </Constructor>
+        <Constructor visibility="private">
+          <Argument type="PersonBuilder" name="builder"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Main" package="aula05_03_Person" visibility="public" xPosition="8.0" yPosition="11.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

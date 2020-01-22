@@ -1,0 +1,1 @@
+creationalPatterns.Singleton.MySingleton

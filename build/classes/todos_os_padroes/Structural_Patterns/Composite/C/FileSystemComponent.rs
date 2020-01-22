@@ -1,0 +1,1 @@
+structuralPatterns.Composite.FileSystemComponent

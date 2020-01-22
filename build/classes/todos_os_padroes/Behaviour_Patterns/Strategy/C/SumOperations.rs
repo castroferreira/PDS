@@ -1,0 +1,1 @@
+behavioralPatterns.Strategy.SumOperations

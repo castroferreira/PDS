@@ -1,0 +1,24 @@
+-> Captura e restaura o estado interno de um objeto.
+-> Em vez de regostar as atividades, regista os snapshots
+
+>> ORIGINATOR: Cria e armazena os estados no objeto memento, pois este preserva o objeto que conhecemos e que queremos guardar
+	- Tem de ter informacao para persistir
+
+>> MEMENTO: Contem o estado do objeto a ser guardado
+	- É a instancia do objeto que queremos guardar
+
+>> CARETAKER: Responsavel por restaurar o estado do objeto do memento.
+	      Funciona como um controlador (guarda os snapshots no padrao adequado)
+	- Historico dos mementos
+
+Usar padrão:
+	-> Guardar o estado interno de um objeto numa determinada instancia sem validar o seu comportamento
+	-> O estado do objeto deve ser armazenado para ser recuperado no futuro.
+	-> Uma interface direta para obtenção de tal estado iria expor a implementação e quebrar o encapsulamento.
+
+Vantagens:
+	-> Preserva o encapsulamento: retira o objeto original a tarefa de armazenar estados anteriores.
+	-> Com o snapshot podemos voltar atras, se os dados estiverem acessiveis, e restaurar os dados
+
+Desvantagem:
+	-> Pode ser caro.

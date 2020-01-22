@@ -1,0 +1,6 @@
+-> Encapsula a ausência de um objeto fornecendo a substituição alternativa que não tenha nenhum comportamento.
+-> Substitui um check null (em vez de usar um if para ver se um dado objeto e null)
+-> Evita as verificacoes if(object == null)
+
+Usar o padrão:
+	-> se quer abstrair a manipulação null longe do cliente.

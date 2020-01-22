@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula10_01_LeiLao">
+  <ClassDiagramComponents>
+    <Class name="Main" package="aula10_01_LeiLao" visibility="public" xPosition="1343.0" yPosition="484.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Observer" package="aula10_01_LeiLao" visibility="public" isAbstract="true" xPosition="630.0" yPosition="545.0">
+      <Fields>
+        <Field name="leilaoSubject" type="List&lt;Subject&gt;" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="update" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="Subject" name="produtoUpdate"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Gestor" package="aula10_01_LeiLao" visibility="public" xPosition="287.0" yPosition="779.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private" isFinal="true"/>
+        <Field name="produto" type="List&lt;Produto&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="addProduto" returnType="void" visibility="public">
+          <Argument type="Produto" name="p"/>
+        </Method>
+        <Method name="existeProduto" returnType="boolean" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="iniciarLeilao" returnType="Subject" visibility="public">
+          <Argument type="Produto" name="produto"/>
+          <Argument type="int" name="timeSeconds"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Subject" name="produtoUpdate"/>
+        </Method>
+        <Method name="removeSubject" returnType="void" visibility="public">
+          <Argument type="Subject" name="s"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Produto" package="aula10_01_LeiLao" visibility="public" xPosition="958.0" yPosition="745.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="descricao" type="String" visibility="private"/>
+        <Field name="preco_base" type="double" visibility="private"/>
+        <Field name="estado" type="Estados" visibility="private"/>
+        <Field name="totalProdutos" type="int" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="descricao"/>
+          <Argument type="double" name="preco"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="getDescricao" returnType="String" visibility="public"/>
+        <Method name="getPreco_base" returnType="double" visibility="public"/>
+        <Method name="getEstado" returnType="Estados" visibility="public"/>
+        <Method name="setEstado" returnType="void" visibility="public">
+          <Argument type="Estados" name="estado"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Subject" package="aula10_01_LeiLao" visibility="public" xPosition="617.0" yPosition="56.0">
+      <Fields>
+        <Field name="produto" type="Produto" visibility="private"/>
+        <Field name="gestor" type="Observer" visibility="private"/>
+        <Field name="licitador" type="List&lt;Observer&gt;" visibility="private"/>
+        <Field name="licitacao_mais_alta" type="Observer" visibility="private"/>
+        <Field name="preco" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Gestor" name="gestor"/>
+          <Argument type="Produto" name="produto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="licitacao" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+          <Argument type="int" name="valor"/>
+        </Method>
+        <Method name="vencedor" returnType="Observer" visibility="public"/>
+        <Method name="notifyGestor" returnType="void" visibility="private"/>
+        <Method name="notifyCliente" returnType="void" visibility="private">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="produtoLeiloado" returnType="String" visibility="public"/>
+        <Method name="valorAtualDoProduto" returnType="double" visibility="public"/>
+        <Method name="codigoProduto" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="aula10_01_LeiLao" visibility="public" xPosition="1245.0" yPosition="124.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Subject" name="produtoUpdate"/>
+        </Method>
+        <Method name="fazerLicitacao" returnType="void" visibility="public">
+          <Argument type="Subject" name="leilao"/>
+          <Argument type="int" name="valor"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="Estados" package="aula10_01_LeiLao" visibility="public" xPosition="1423.0" yPosition="796.0">
+      <Literals>
+        <Literal name="STOCK"/>
+        <Literal name="LEILAO"/>
+        <Literal name="VENDAS"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="aula10_01_LeiLao.Subject" target="aula10_01_LeiLao.Observer" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="gestor" source="aula10_01_LeiLao.Subject" target="aula10_01_LeiLao.Observer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula10_01_LeiLao.Gestor" target="aula10_01_LeiLao.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="aula10_01_LeiLao.Gestor" target="aula10_01_LeiLao.Observer"/>
+    <HasRelation name="licitador" source="aula10_01_LeiLao.Subject" target="aula10_01_LeiLao.Observer" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Observer&gt;"/>
+    <IsRelation name="is" source="aula10_01_LeiLao.Cliente" target="aula10_01_LeiLao.Observer"/>
+    <HasRelation name="leilaoSubject" source="aula10_01_LeiLao.Observer" target="aula10_01_LeiLao.Subject" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Subject&gt;"/>
+    <UseRelation source="aula10_01_LeiLao.Observer" target="aula10_01_LeiLao.Subject" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="estado" source="aula10_01_LeiLao.Produto" target="aula10_01_LeiLao.Estados" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula10_01_LeiLao.Produto" target="aula10_01_LeiLao.Estados" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produto" source="aula10_01_LeiLao.Subject" target="aula10_01_LeiLao.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produto" source="aula10_01_LeiLao.Gestor" target="aula10_01_LeiLao.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Produto&gt;"/>
+    <HasRelation name="licitacao_mais_alta" source="aula10_01_LeiLao.Subject" target="aula10_01_LeiLao.Observer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula10_01_LeiLao.Gestor" target="aula10_01_LeiLao.Subject" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula10_01_LeiLao.Subject" target="aula10_01_LeiLao.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula10_01_LeiLao.Cliente" target="aula10_01_LeiLao.Subject" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

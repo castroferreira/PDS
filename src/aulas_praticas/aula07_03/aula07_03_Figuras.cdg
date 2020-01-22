@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula07_03_Figuras">
+  <ClassDiagramComponents>
+    <Class name="GeometricFigures" package="aula07_03_Figuras" visibility="public" xPosition="567.0" yPosition="134.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Figura" package="aula07_03_Figuras" visibility="public" isAbstract="true" xPosition="822.0" yPosition="294.0">
+      <Fields>
+        <Field name="name" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="draw" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Circulo" package="aula07_03_Figuras" visibility="public" xPosition="818.0" yPosition="469.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Quadrado" package="aula07_03_Figuras" visibility="public" xPosition="808.0" yPosition="134.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Rectangulo" package="aula07_03_Figuras" visibility="public" xPosition="567.0" yPosition="310.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Bloco" package="aula07_03_Figuras" visibility="public" xPosition="1066.0" yPosition="276.0">
+      <Fields>
+        <Field name="figuras" type="List&lt;Figura&gt;" visibility="private"/>
+        <Field name="tabs" type="String" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Figura" name="f"/>
+        </Method>
+        <Method name="draw" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="figuras" source="aula07_03_Figuras.Bloco" target="aula07_03_Figuras.Figura" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Figura&gt;"/>
+    <IsRelation name="is" source="aula07_03_Figuras.Circulo" target="aula07_03_Figuras.Figura"/>
+    <IsRelation name="is" source="aula07_03_Figuras.Rectangulo" target="aula07_03_Figuras.Figura"/>
+    <IsRelation name="is" source="aula07_03_Figuras.Bloco" target="aula07_03_Figuras.Figura"/>
+    <IsRelation name="is" source="aula07_03_Figuras.Quadrado" target="aula07_03_Figuras.Figura"/>
+    <UseRelation source="aula07_03_Figuras.Bloco" target="aula07_03_Figuras.Figura" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,1 @@
+ExameRecurso.FactoryMethod.Square

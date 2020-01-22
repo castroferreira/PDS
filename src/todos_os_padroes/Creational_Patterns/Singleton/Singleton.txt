@@ -1,0 +1,22 @@
+-> Este padrão serve para garantir que uma classe possui apenas uma instância e fornece um ponto de acesso global a ela (método static)
+
+Usar padrão:
+	-> Tiver que haver exatamente uma instância de uma classe e ela tiver que estar acessivel a todos num local bem definido.
+	-> Quiser permitir ainda que esta classe tenha subclasses (construtor private/protected)
+
+Vantagens:
+	-> acesso controlado a instância: a própria classe controla a sua unica instancia 
+	-> Não é necessario exister variaveis globais
+	-> Permite extensão e refinamento: a classe singleton pode conter subclasses
+	-> permite um número variado de instâncias 
+	-> Mais flexivel do que operações de classes: Usar o membro static perde flexibilidade
+
+
+_________________________________________________________________________________________________________________________________________
+
+LAZY INITIALIZATION
+
+-> Implementacao do padrao singleton
+-> Adia a instanciacao de um objeto ate a sua primeira utilizacao
+-> A instancia da classe e criada quando e necessaria para ser usada pela primeira vez
+-> A instancia pode ser encapsulada durante a utilizacao ou incializada durante a primeira utilizacao

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula09_03_ChainOfResponsability">
+  <ClassDiagramComponents>
+    <Class name="Main" package="aula09_03_ChainOfResponsability" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Banco1" package="aula09_03_ChainOfResponsability" visibility="public" xPosition="37.0" yPosition="186.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="efetuaPagamento" returnType="void" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="Banco4" package="aula09_03_ChainOfResponsability" visibility="public" xPosition="545.0" yPosition="361.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="efetuaPagamento" returnType="void" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="ChainOfResponsability" package="aula09_03_ChainOfResponsability" visibility="public" isAbstract="true" xPosition="305.0" yPosition="20.0">
+      <Fields>
+        <Field name="next" type="ChainOfResponsability" visibility="protected"/>
+        <Field name="idBanco" type="Banco" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Banco" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setNext" returnType="void" visibility="public">
+          <Argument type="ChainOfResponsability" name="chain"/>
+        </Method>
+        <Method name="efetuarPagamento" returnType="void" visibility="public">
+          <Argument type="Banco" name="id"/>
+        </Method>
+        <Method name="podeEfetuarPagamento" returnType="boolean" visibility="private">
+          <Argument type="Banco" name="id"/>
+        </Method>
+        <Method name="efetuaPagamento" returnType="void" visibility="protected" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="Banco2" package="aula09_03_ChainOfResponsability" visibility="public" xPosition="84.0" yPosition="361.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="efetuaPagamento" returnType="void" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="Banco3" package="aula09_03_ChainOfResponsability" visibility="public" xPosition="331.0" yPosition="361.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="efetuaPagamento" returnType="void" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Enum name="Banco" package="aula09_03_ChainOfResponsability" visibility="public" xPosition="731.0" yPosition="76.0">
+      <Literals>
+        <Literal name="banco1"/>
+        <Literal name="banco2"/>
+        <Literal name="banco3"/>
+        <Literal name="banco4"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="aula09_03_ChainOfResponsability.ChainOfResponsability" target="aula09_03_ChainOfResponsability.Banco" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="aula09_03_ChainOfResponsability.Banco2" target="aula09_03_ChainOfResponsability.ChainOfResponsability"/>
+    <IsRelation name="is" source="aula09_03_ChainOfResponsability.Banco4" target="aula09_03_ChainOfResponsability.ChainOfResponsability"/>
+    <IsRelation name="is" source="aula09_03_ChainOfResponsability.Banco3" target="aula09_03_ChainOfResponsability.ChainOfResponsability"/>
+    <HasRelation name="next" source="aula09_03_ChainOfResponsability.ChainOfResponsability" target="aula09_03_ChainOfResponsability.ChainOfResponsability" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="idBanco" source="aula09_03_ChainOfResponsability.ChainOfResponsability" target="aula09_03_ChainOfResponsability.Banco" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula09_03_ChainOfResponsability.ChainOfResponsability" target="aula09_03_ChainOfResponsability.ChainOfResponsability" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="aula09_03_ChainOfResponsability.Banco1" target="aula09_03_ChainOfResponsability.ChainOfResponsability"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

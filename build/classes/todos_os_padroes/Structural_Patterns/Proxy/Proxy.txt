@@ -1,0 +1,53 @@
+-> Fornece um representante ou ponto de acesso que controle o acesso a um objeto.
+-> O objeto proxy contém uma referência para o objeto real.
+-> Os clientes recebem uma referência para o proxy, não para o objeto real.
+-> Controla o acesso a um determinado objeto
+-> Da permissoes consoantes os privilegios do utilizador
+-> Semelhante ao decorator (ambos criam um wrapper em torno do outro objeto)
+
+-> Usar padrão:
+	-> Quando precisamaos de um acesso mais versátil a um objeto do que a um ponteiro.
+		- Remote proxy 
+			. Facil acesso ao objeto real 
+		- Virtual proxy 
+			. Util para realizar otimizacoes de cache de objetos. 
+			. Pode ser implementado em rotinas de logs e controlo de acesso (seguranca)
+		- Protection proxy
+
+-> Vantagens:
+	-> Adiciona um nivel de separação 
+	-> Transparência na execução de acções de carregamento de objetos.
+
+-> Situacoes aplicadas:
+
+	>> Secure Objects
+		- Em vez de adicionar funcionalidades (como acontece no Decorator), um proxy pode impedir o acesso a essas funcionalidades
+		- Garante um representante para outro objeto com o intuito de controlar o acesso a ele
+		- Permite encapsular um objeto atraves de outro objeto que possua a mesma interface de forma a que o segundo objeto (proxy) 7
+		  controle o acesso ao primeiro objeto real
+
+	>> Distributed Objects
+		- Os proxies sao invisiveis para o cliente por isso nao alteram o codigo do cliente, quando introduzidos
+		- O cliente e o objeto real estao em processos e maquinas diferentes por isso a chamada direta nao acontece
+		- O proxy e responsavel por passar a chamada ao metodo atraves dos limites do processo ou da maquina
+		- Com a ajuda de um broker retorna o resultado para o client
+
+	>> Lazy Loading	
+		- O proxy cria um objeto, sob demanda, assim que o client o usar pela primeira vez
+		- Armazena qualquer informacao necessaria para criar o objeto
+		- Os objetos tornam-se dispendiosos e o desempenho complicado (flyweight)
+
+	>> Copy-on-write
+		- Varios clientes partilham o mesmo objeto desde que ninguem tente altera-lo
+		- Quando um client tenta alterar o objeto, obtem a sua copia privada
+
+	>> Java Collections
+		-> Read-only Collection
+			- Nao pode ser modificada depois de criada
+			- Depois de criada nao e possivel adicionar, remover ou editar elementos
+			- Quaisquer operacoes ao tentar executar este tipo de collections resultara numa excecao UnsupportedOperationException
+		
+		-> Synchronized Collection
+			- Envolve o objeto da num proxy
+			- Garante que apenas uma thread de cada vez tem permissao para aceder a collection
+			- O proxy adquire o bloqueio antes de chamar um metodo e desbloqueia depois que o metodo tenha sido concluido

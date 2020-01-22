@@ -1,0 +1,1 @@
+structuralPatterns.Decorator1.Jogador

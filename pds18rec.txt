@@ -1,0 +1,38 @@
+/home/andreia/Documentos/PDS/pds_EpocaEspecial
+
+Alínea 1) ----------------------------------
+
+--- Todas as Viaturas :
+Eletrico [matricula=11-ZB-11, descricao=Tesla, Branco escuro platinado, 2018, tipo=K]
+Ligeiro [matricula=11-ZA-12, descricao=Ford, Camaro, vermelho, 2017, tipo=X]
+Mota [matricula=11-ZC-13, descricao=Fiat, 500, branco, 2018, tipo=A]
+Eletrico [matricula=11-ZA-88, descricao=Fiat, 500, branco, 2018, tipo=A]
+Eletrico [matricula=11-ZC-34, descricao=BMW i3, 2017, tipo=Z]
+Eletrico [matricula=11-ZB-11, descricao=Tesla, Branco escuro platinado, 2018, tipo=K]
+Ligeiro [matricula=11-ZA-12, descricao=Ford, Camaro, vermelho, 2017, tipo=X]
+Mota [matricula=11-ZC-13, descricao=Fiat, 500, branco, 2018, tipo=A]
+Eletrico [matricula=11-ZA-88, descricao=Fiat, 500, branco, 2018, tipo=A]
+Eletrico [matricula=11-ZC-34, descricao=BMW i3, 2017, tipo=Z]
+--- Viaturas alugadas :
+Total: 3
+--- Viaturas alugadas :
+Total: 2
+
+Alínea 2 (exemplo de output) ----------------------------------
+
+--- Total de Viaturas :
+Total: 0
+--- Todas as Viaturas :
+Eletrico [matricula=11-ZB-11, descricao=Tesla, Branco escuro platinado, 2018, tipo=K]
+Ligeiro [matricula=11-ZA-12, descricao=Ford, Camaro, vermelho, 2017, tipo=X]
+Mota [matricula=11-ZC-13, descricao=Fiat, 500, branco, 2018, tipo=A]
+Eletrico [matricula=11-ZA-88, descricao=Fiat, 500, branco, 2018, tipo=A]
+Eletrico [matricula=11-ZC-34, descricao=BMW i3, 2017, tipo=Z]
+Eletrico [matricula=11-ZB-11, descricao=Tesla, Branco escuro platinado, 2018, tipo=K]
+Ligeiro [matricula=11-ZA-12, descricao=Ford, Camaro, vermelho, 2017, tipo=X]
+Mota [matricula=11-ZC-13, descricao=Fiat, 500, branco, 2018, tipo=A]
+Eletrico [matricula=11-ZA-88, descricao=Fiat, 500, branco, 2018, tipo=A]
+Eletrico [matricula=11-ZC-34, descricao=BMW i3, 2017, tipo=Z]
+
+Alínea 3) ----------------------------------
+

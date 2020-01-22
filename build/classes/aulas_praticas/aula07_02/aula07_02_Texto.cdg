@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula07_02_Texto">
+  <ClassDiagramComponents>
+    <Class name="Main" package="aula07_02_Texto" visibility="public" xPosition="132.0" yPosition="22.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TermFilter" package="aula07_02_Texto" visibility="public" xPosition="396.0" yPosition="217.0">
+      <Fields>
+        <Field name="text" type="String[]" visibility="private"/>
+        <Field name="i" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="TextReaderInterface" name="textReader"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="next" returnType="String" visibility="public"/>
+        <Method name="hasNext" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CoderFilter" package="aula07_02_Texto" visibility="public" xPosition="1081.0" yPosition="215.0">
+      <Fields>
+        <Field name="text" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="TextReaderInterface" name="textReader"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="next" returnType="String" visibility="public"/>
+        <Method name="hasNext" returnType="boolean" visibility="public"/>
+        <Method name="codify" returnType="String" visibility="private">
+          <Argument type="String" name="word"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Decorator" package="aula07_02_Texto" visibility="public" isAbstract="true" xPosition="735.0" yPosition="217.0">
+      <Fields>
+        <Field name="textReader" type="TextReaderInterface" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="TextReaderInterface" name="textReader"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="hasNext" returnType="boolean" visibility="public"/>
+        <Method name="next" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ReverseFilter" package="aula07_02_Texto" visibility="public" xPosition="726.0" yPosition="22.0">
+      <Fields>
+        <Field name="text" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="TextReaderInterface" name="textReader"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="next" returnType="String" visibility="public"/>
+        <Method name="hasNext" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TXTReader" package="aula07_02_Texto" visibility="public" xPosition="132.0" yPosition="275.0">
+      <Fields>
+        <Field name="file" type="File" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="filename"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="readFile" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TextReader" package="aula07_02_Texto" visibility="public" xPosition="445.0" yPosition="437.0">
+      <Fields>
+        <Field name="fileReader" type="FileReader" visibility="private"/>
+        <Field name="text" type="String[]" visibility="private"/>
+        <Field name="i" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="filename"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="hasNext" returnType="boolean" visibility="public"/>
+        <Method name="next" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="FileReader" package="aula07_02_Texto" visibility="public" xPosition="155.0" yPosition="485.0">
+      <Methods>
+        <Method name="readFile" returnType="String" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="TextReaderInterface" package="aula07_02_Texto" visibility="public" xPosition="796.0" yPosition="477.0">
+      <Methods>
+        <Method name="hasNext" returnType="boolean" visibility="public"/>
+        <Method name="next" returnType="String" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula07_02_Texto.TextReader" target="aula07_02_Texto.TextReaderInterface"/>
+    <IsRelation name="is" source="aula07_02_Texto.CoderFilter" target="aula07_02_Texto.Decorator"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula07_02_Texto.TXTReader" target="aula07_02_Texto.FileReader"/>
+    <IsRelation name="is" source="aula07_02_Texto.TermFilter" target="aula07_02_Texto.Decorator"/>
+    <IsRelation name="is" source="aula07_02_Texto.ReverseFilter" target="aula07_02_Texto.Decorator"/>
+    <HasRelation name="textReader" source="aula07_02_Texto.Decorator" target="aula07_02_Texto.TextReaderInterface" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula07_02_Texto.Decorator" target="aula07_02_Texto.TextReaderInterface"/>
+    <HasRelation name="fileReader" source="aula07_02_Texto.TextReader" target="aula07_02_Texto.FileReader" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula10_02_NullObject">
+  <ClassDiagramComponents>
+    <Class name="Main" package="aula10_02_NullObject" visibility="public" xPosition="39.0" yPosition="36.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmployeeFactory" package="aula10_02_NullObject" visibility="public" xPosition="39.0" yPosition="193.0">
+      <Fields>
+        <Field name="names" type="String[]" visibility="public" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCustomer" returnType="Employee" visibility="public" isStatic="true">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Employee" package="aula10_02_NullObject" visibility="public" isAbstract="true" xPosition="485.0" yPosition="177.0">
+      <Fields>
+        <Field name="name" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public" isAbstract="true"/>
+        <Method name="isNull" returnType="boolean" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="Programmer" package="aula10_02_NullObject" visibility="public" xPosition="735.0" yPosition="184.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="isNull" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="NullObject" package="aula10_02_NullObject" visibility="public" xPosition="452.0" yPosition="403.0">
+      <Fields>
+        <Field name="singleton" type="NullObject" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstance" returnType="NullObject" visibility="public" isStatic="true"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="isNull" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="aula10_02_NullObject.Programmer" target="aula10_02_NullObject.Employee"/>
+    <UseRelation source="aula10_02_NullObject.NullObject" target="aula10_02_NullObject.NullObject" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="aula10_02_NullObject.NullObject" target="aula10_02_NullObject.Employee"/>
+    <UseRelation source="aula10_02_NullObject.EmployeeFactory" target="aula10_02_NullObject.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="singleton" source="aula10_02_NullObject.NullObject" target="aula10_02_NullObject.NullObject" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

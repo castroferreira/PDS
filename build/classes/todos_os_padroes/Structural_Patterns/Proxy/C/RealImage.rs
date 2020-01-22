@@ -1,0 +1,1 @@
+structuralPatterns.Proxy.RealImage

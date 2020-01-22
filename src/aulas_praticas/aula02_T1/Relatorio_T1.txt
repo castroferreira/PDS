@@ -1,0 +1,7 @@
+Relativamente ao T1:
+
+A class WSSolver.java apenas faz a leitura do ficheiro, através de um buffered reader, devolvendo as palavras a encontrar.
+
+Na linha 41 foi declarado um arrayList chamado words que nunca foi usado.
+
+No T2,

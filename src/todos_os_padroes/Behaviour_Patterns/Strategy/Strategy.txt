@@ -1,0 +1,21 @@
+-> Define uma familia de algoritmos e permite que um objeto possa escolher qual algoritmo da familia deve utilizar em cada situação.
+-> O Comportamento é encapsulado em objetos de uma mesma familia.
+
+Usar padrão:
+	-> várias classes diferentes, diferem-se somente no comportamento.
+	-> É necessário variantes do mesmo algoritmo
+	-> Um algoritmo utiliza dados que o cliente não deve conhecer.
+
+Vantagens:
+	-> Principios de GRASP
+	-> Familias de algoritmos: Herança e polimorfismo
+	-> Comportamento é o unico que varia.
+	-> Eliminam grandes condicionais: Evita código monolítico
+	-> Escolha de implementações: Estratégias em runtime
+	-> Os cliente devem conhecer as estratégias para escolher qual usar no momento.
+	-> Parâmetros diferentes para algoritmos diferentes
+	-> O algoritmo consegue avaliar independentemente do cliente que o esta a usar
+	-> É possivel alterar as classes dos elementos sobre os quais opera (de forma a definir novas operacoes)
+
+Desvantagem:
+	-> Aumenta o numero de objetos.

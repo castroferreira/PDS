@@ -1,0 +1,1 @@
+behavioralPatterns.State.NoCash

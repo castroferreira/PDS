@@ -1,0 +1,9 @@
+/**
+ * PDS 2017/2018 G29
+ *
+ * @author Andreia Ferreira
+ * @author Rui Serrano
+ */
+
+Após analisar a implementação da classe java.util.Calendar é possível identificar os padrões Factory e o Abstract Factory na criação do tipo de calendário. Bem como métodos estáticos getInstance que retornam uma instância calender.
+De salientar que a função createCalender cria uma classe específica do tipo calendário (gregoriano, budista, etc) e tem um construtor protected, o que permite a impossibilidade do utilizador criar instâncias deste objeto.

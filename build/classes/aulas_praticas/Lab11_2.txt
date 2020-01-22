@@ -1,0 +1,19 @@
+As classes abstractas escolhidas foram: java.io.InputStream, java.io.OutputStream e java.io.Reader.
+
+A classe abstracta java.io.InputStream tem o método read() como abstracto, o que obriga a classe que extender java.io.InputStream a implementar o método read().
+
+Ao invocar o método read(byte[] b,int off,int len) da classe abstracta, este método irá invocar o método read(), para proceder a uma leitura sequencial sem ter 
+conhecimento como se efetua a leitura de 1 byte, pois o método read é abstrato.
+
+Concluindo, podemos dizer que o método read() é abstrato porque existem vários e diferentes streamers de entrada no qual a implementação de como ler um byte depende do 
+tipo de streamer. Assim cabe à class (que extende) ficar responsável pela implementação do método read() e assim será esta que ficará responsável por definir como será 
+lido o byte do seu streamer de entrada (template), como por exemplo FileInputStream ou ObjectInputStream. 
+
+Com isto consegue-se uma melhor gestão dos diferentes InputStream existentes, visto que existirá uma classe responsável por eles e o InputStream será usado como template.
+
+Ainda podemos acrescentar que na class abstracta java.io.InputStream existe a implementação do método read(byte[] b,int off,int len) que permite ler uma sequencia de bytes de um stream de entrada para um array de bytes, e este método utiliza o método abstrato read() para ler sequencialmente os bytes para o array, e assim é possivel ler uma sequencia de bytes, sem saber como se lê um byte, pois esta implementação só está definida na class respetiva para um determinado stream de entrada
+
+A classe absracta java.io.OutputStream é semelhante à java.io.InputStream, mas com o método abstracto write() que possuí o mesmo número de argumentos que um dos métodos 
+públicos(diferindo se o argumento é byte ou inteiro).
+ 
+A classe absracta java.io.Reader é semelhante a java.io.InputStream, mas com o método abstracto read() invocado em skip().

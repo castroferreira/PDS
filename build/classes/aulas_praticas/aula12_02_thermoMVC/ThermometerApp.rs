@@ -1,0 +1,2 @@
+aula12_02_thermoMVC.ThermometerApp$1
+aula12_02_thermoMVC.ThermometerApp

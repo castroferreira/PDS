@@ -1,0 +1,8 @@
+-> Este padrao explica como e quando os objetos podem ser partilhados (object pool)
+
+-> Usamos este padrao quando:
+	-> A aplicacao gere um grande numero de objetos 
+	-> Queremos ter objetos pre-construidos e sabemos que estes objetos nao vao ser muito utilizados
+
+-> Desvantagem:
+	-> Apresenta um custo de armazenamento elevado, pelo que nao e muito utilizado

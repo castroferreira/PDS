@@ -1,0 +1,3 @@
+aula02_T2_01.Solution$Direction
+aula02_T2_01.Solution
+Direction

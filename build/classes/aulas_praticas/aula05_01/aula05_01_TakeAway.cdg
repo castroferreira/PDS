@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula05_01_TakeAway">
+  <ClassDiagramComponents>
+    <Class name="PlasticBottle" package="aula05_01_TakeAway" visibility="public" xPosition="2130.0" yPosition="793.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Tupperware" package="aula05_01_TakeAway" visibility="public" xPosition="2130.0" yPosition="438.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BeverageFactory" package="aula05_01_TakeAway" visibility="public" xPosition="1544.0" yPosition="60.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="createBeverage" returnType="Commodity" visibility="package" isStatic="true">
+          <Argument type="Temperature" name="temperature"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ContainerFactory" package="aula05_01_TakeAway" visibility="public" xPosition="1101.0" yPosition="60.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="createContainerFor" returnType="Container" visibility="package" isStatic="true">
+          <Argument type="Commodity" name="commodity"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="aula05_01_TakeAway" visibility="public" xPosition="2067.0" yPosition="1167.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TermicBottle" package="aula05_01_TakeAway" visibility="public" xPosition="1805.0" yPosition="793.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Container" package="aula05_01_TakeAway" visibility="public" isAbstract="true" xPosition="1731.0" yPosition="546.0">
+      <Fields>
+        <Field name="commodity" type="Commodity" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="placeCommodity" returnType="boolean" visibility="public">
+          <Argument type="Commodity" name="c"/>
+        </Method>
+        <Method name="getCommodity" returnType="Commodity" visibility="protected"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PlasticBag" package="aula05_01_TakeAway" visibility="public" xPosition="2130.0" yPosition="579.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MeatFactory" package="aula05_01_TakeAway" visibility="public" xPosition="1544.0" yPosition="1167.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="createMeat" returnType="Commodity" visibility="package" isStatic="true">
+          <Argument type="Temperature" name="temperature"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Milk" package="aula05_01_TakeAway" visibility="public" xPosition="1175.0" yPosition="1133.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getTemperature" returnType="Temperature" visibility="public"/>
+        <Method name="getState" returnType="State" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FruitJuice" package="aula05_01_TakeAway" visibility="public" xPosition="20.0" yPosition="1099.0">
+      <Fields>
+        <Field name="fruitName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="fruitName"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTemperature" returnType="Temperature" visibility="public"/>
+        <Method name="getState" returnType="State" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pork" package="aula05_01_TakeAway" visibility="public" xPosition="217.0" yPosition="563.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getTemperature" returnType="Temperature" visibility="public"/>
+        <Method name="getState" returnType="State" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Tuna" package="aula05_01_TakeAway" visibility="public" xPosition="606.0" yPosition="60.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getTemperature" returnType="Temperature" visibility="public"/>
+        <Method name="getState" returnType="State" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Commodity" package="aula05_01_TakeAway" visibility="public" xPosition="1235.0" yPosition="563.0">
+      <Methods>
+        <Method name="getTemperature" returnType="Temperature" visibility="public"/>
+        <Method name="getState" returnType="State" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Enum name="State" package="aula05_01_TakeAway" visibility="public" xPosition="606.0" yPosition="1152.0">
+      <Literals>
+        <Literal name="Solid"/>
+        <Literal name="Liquid"/>
+      </Literals>
+    </Enum>
+    <Enum name="Temperature" package="aula05_01_TakeAway" visibility="public" xPosition="103.0" yPosition="60.0">
+      <Literals>
+        <Literal name="WARM"/>
+        <Literal name="COLD"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="aula05_01_TakeAway.Tuna" target="aula05_01_TakeAway.State" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula05_01_TakeAway.Tuna" target="aula05_01_TakeAway.Temperature" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula05_01_TakeAway.Milk" target="aula05_01_TakeAway.Temperature" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula05_01_TakeAway.Milk" target="aula05_01_TakeAway.State" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="commodity" source="aula05_01_TakeAway.Container" target="aula05_01_TakeAway.Commodity" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="aula05_01_TakeAway.TermicBottle" target="aula05_01_TakeAway.Container"/>
+    <UseRelation source="aula05_01_TakeAway.Commodity" target="aula05_01_TakeAway.Temperature" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula05_01_TakeAway.FruitJuice" target="aula05_01_TakeAway.State" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="aula05_01_TakeAway.PlasticBag" target="aula05_01_TakeAway.Container"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula05_01_TakeAway.FruitJuice" target="aula05_01_TakeAway.Commodity"/>
+    <UseRelation source="aula05_01_TakeAway.Container" target="aula05_01_TakeAway.Commodity" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula05_01_TakeAway.BeverageFactory" target="aula05_01_TakeAway.Commodity" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula05_01_TakeAway.MeatFactory" target="aula05_01_TakeAway.Commodity" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula05_01_TakeAway.Pork" target="aula05_01_TakeAway.Commodity"/>
+    <UseRelation source="aula05_01_TakeAway.Pork" target="aula05_01_TakeAway.Temperature" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula05_01_TakeAway.Pork" target="aula05_01_TakeAway.State" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula05_01_TakeAway.Tuna" target="aula05_01_TakeAway.Commodity"/>
+    <UseRelation source="aula05_01_TakeAway.ContainerFactory" target="aula05_01_TakeAway.Commodity" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula05_01_TakeAway.FruitJuice" target="aula05_01_TakeAway.Temperature" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula05_01_TakeAway.Commodity" target="aula05_01_TakeAway.State" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="aula05_01_TakeAway.Tupperware" target="aula05_01_TakeAway.Container"/>
+    <IsRelation name="is" source="aula05_01_TakeAway.PlasticBottle" target="aula05_01_TakeAway.Container"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula05_01_TakeAway.Milk" target="aula05_01_TakeAway.Commodity"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

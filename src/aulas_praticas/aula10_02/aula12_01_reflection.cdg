@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula12_01_reflection">
+  <ClassDiagramComponents>
+    <Class name="PluginManager" package="aula12_01_reflection" visibility="public" isAbstract="true" xPosition="135.0" yPosition="27.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="load" returnType="IPlugin" visibility="public" isStatic="true">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Plugin" package="aula12_01_reflection" visibility="public" xPosition="140.0" yPosition="215.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SomePlugin" package="aula12_01_reflection.plugins" visibility="public" xPosition="493.0" yPosition="215.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fazQualQuerCoisa" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="IPlugin" package="aula12_01_reflection" visibility="public" xPosition="493.0" yPosition="27.0">
+      <Methods>
+        <Method name="fazQualQuerCoisa" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="aula12_01_reflection.PluginManager" target="aula12_01_reflection.Plugin" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula12_01_reflection.plugins.SomePlugin" target="aula12_01_reflection.IPlugin"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

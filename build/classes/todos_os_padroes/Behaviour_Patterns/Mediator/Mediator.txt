@@ -1,0 +1,19 @@
+-> Funciona como um intermediario na comunicacao entre dois comparators
+-> Garante que temos um controlador de mensagens
+-> Define um objeto que encapsula a informação de como um conjunto de outros objetos interagem entre si.
+-> Promove o baixo acoplamento:
+	- Permite alterar a forma de interação sem alterar os objetos que interagem.
+-> Tem a responsabilidade de realizar a comunicação entre muitos objetos.
+-> A classe mediator lida com toda a comunicacao entre as diferentes classes
+-> Contraliza a comunicacao entre os objetos que estao no mesmo sitio
+
+Usar padrão:
+	-> Quando queremos reduzir a complexidade da comunicacao entre os objetos ou classes
+	-> Um conjuntos de objetos se comunica de uma forma bem determinada, porém complexa.
+	-> Um comportamento que é distribuido entre várias classes deve ser extensível sem ter que criar muitas subclasses.
+
+Vantagens:
+	-> Limita a extensão por herança: estende ou altera o comportamento basta criar uma subclasse do mediator
+	-> Desacopla objetos: promove o reuso
+	-> Simplifica o protocolo: Fica mais claro como os objetos interagem
+	-> Fácil manutencao do codigo atraves do baixo acoplamento

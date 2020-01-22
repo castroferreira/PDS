@@ -1,0 +1,1 @@
+aula06_01_EmpresaPst.Registos_Adapter

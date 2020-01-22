@@ -1,0 +1,21 @@
+-> O objeto consegue alterar o seu comportamento assim que mudar de estado interno
+
+-> Orientado a maquinas de estados
+	- Sao criados objetos concretos, que representam varios estados
+
+-> É criado o objeto contextual 
+	- cujo o seu comportamento varia consoante a mudanca dos estados dos objetos
+
+-> A transicao dos estados e explicita porque fica claro no diagrama de classes  os estados possiveis
+
+-> Os estados so podem ser partilhados se nao armazenarem estados em atributos
+
+-> É criada a interface state 
+	- define a acao
+
+-> São criadas classes concretas (de estados internos) que implementam a interface state
+
+-> O context é a classe que contem o estado
+
+-> Quando o comportamento de um objeto depende do seu estado (alterado em tempo de execucao)
+   separa o comportamento dependendo de novos estados/comportamentos que podem ser adicionados

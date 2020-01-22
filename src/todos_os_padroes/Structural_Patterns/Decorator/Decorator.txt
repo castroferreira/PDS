@@ -1,0 +1,13 @@
+-> Anexa as funcionalidades adicionais a um objeto dinamicamente.
+-> Fornece uma alternativa flexivel à herança como mecanismo de extensão.
+
+Usar o padrão:
+	-> Queremos adicionar funcionalidades a objetos individuais dinamicamente, sem afetar o seu comportamento.
+	-> Queremos adicionar funcionalidades que podem ser desativadas mais tarde.
+
+Vantagens:
+	-> Maior flexibilidade do que herança: Podem ser adicionados ou removidos em tempo de execução.
+
+Desvantagem:
+	-> Muitos objetos pequenos: com a utilização do decorator, um projeto pode vir a ter muitos objetos pequenos e parecidos.
+	

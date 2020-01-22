@@ -1,0 +1,10 @@
+-> Separa o processo de construção de um objeto complexo para que o mesmo processo possa ser criado de várias maneiras.
+
+Usar o padrão:
+	-> O algoritmo para a criação de objetos complexos tiver que ser independente das partes que compõem o objeto e como elas são unidas. 
+	-> O processo de construção tiver que permitir diferentes representações do objeto construido.
+
+Vantagens:
+	-> Permite que varie a representação interna de um produto
+	-> Separa o código da contrução: melhora a modularidade, pois o cliente não precisa de saber a representação interna do produto.
+	-> Existe um maior controlo do processo de construção.

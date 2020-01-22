@@ -1,0 +1,14 @@
+-> Funciona como uma juncao dos padroes factory e pool
+-> Especificar o tipo de objeto a ser criado, utilizando uma instância como protótipo e criar novos objetos copiando este protótipo.
+
+Usar padrão:
+	-> Quando nao queremos construir uma fabrica para cada hierarquia de produtos
+	-> O sistema deve ser independente de como o seus produtos são criados, compostos e representados.
+
+Vantagens:
+	-> Esconde a implementação do produto
+	-> Permite adicionar e remover produtos em tempo de execução
+	-> não necessita de uma fábrica para cada hierarquia de objetos
+
+Desvantagens:
+	-> Implementar clone() pode ser complicado.

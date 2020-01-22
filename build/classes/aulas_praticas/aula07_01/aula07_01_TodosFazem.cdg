@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula07_01_TodosFazem">
+  <ClassDiagramComponents>
+    <Class name="Main" package="aula07_01_TodosFazem" visibility="public" xPosition="121.0" yPosition="98.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TeamMember" package="aula07_01_TodosFazem" visibility="public" xPosition="547.0" yPosition="535.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="EmployeeInterface" name="employee"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="date"/>
+        </Method>
+        <Method name="terminate" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="date"/>
+        </Method>
+        <Method name="work" returnType="void" visibility="public"/>
+        <Method name="colaborate" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TeamLeader" package="aula07_01_TodosFazem" visibility="public" xPosition="942.0" yPosition="282.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="EmployeeInterface" name="employee"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="date"/>
+        </Method>
+        <Method name="terminate" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="date"/>
+        </Method>
+        <Method name="work" returnType="void" visibility="public"/>
+        <Method name="plan" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Decorator" package="aula07_01_TodosFazem" visibility="public" xPosition="558.0" yPosition="274.0">
+      <Fields>
+        <Field name="employee" type="EmployeeInterface" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="EmployeeInterface" name="employee"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="date"/>
+        </Method>
+        <Method name="terminate" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="date"/>
+        </Method>
+        <Method name="work" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Manager" package="aula07_01_TodosFazem" visibility="public" xPosition="562.0" yPosition="30.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="EmployeeInterface" name="employee"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="date"/>
+        </Method>
+        <Method name="terminate" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="date"/>
+        </Method>
+        <Method name="work" returnType="void" visibility="public"/>
+        <Method name="manage" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Employee" package="aula07_01_TodosFazem" visibility="public" xPosition="121.0" yPosition="535.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="date_start" type="LocalDate" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="date"/>
+        </Method>
+        <Method name="terminate" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="date"/>
+        </Method>
+        <Method name="work" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="EmployeeInterface" package="aula07_01_TodosFazem" visibility="public" xPosition="121.0" yPosition="305.0">
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="date"/>
+        </Method>
+        <Method name="terminate" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="date"/>
+        </Method>
+        <Method name="work" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula07_01_TodosFazem.Decorator" target="aula07_01_TodosFazem.EmployeeInterface"/>
+    <HasRelation name="employee" source="aula07_01_TodosFazem.Decorator" target="aula07_01_TodosFazem.EmployeeInterface" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="aula07_01_TodosFazem.Manager" target="aula07_01_TodosFazem.Decorator"/>
+    <IsRelation name="is" source="aula07_01_TodosFazem.TeamMember" target="aula07_01_TodosFazem.Decorator"/>
+    <IsRelation name="is" source="aula07_01_TodosFazem.TeamLeader" target="aula07_01_TodosFazem.Decorator"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula07_01_TodosFazem.Employee" target="aula07_01_TodosFazem.EmployeeInterface"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

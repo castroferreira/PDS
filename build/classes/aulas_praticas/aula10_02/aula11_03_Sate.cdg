@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula11_03_Sate">
+  <ClassDiagramComponents>
+    <Class name="Main" package="aula11_03_Sate" visibility="public" xPosition="1392.0" yPosition="524.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Livro" package="aula11_03_Sate" visibility="public" xPosition="797.0" yPosition="64.0">
+      <Fields>
+        <Field name="titulo" type="String" visibility="private"/>
+        <Field name="ano" type="int" visibility="private"/>
+        <Field name="estado" type="State" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="String" name="ISBN"/>
+          <Argument type="String" name="autor"/>
+          <Argument type="int" name="ano"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getISBN" returnType="String" visibility="public"/>
+        <Method name="getAno" returnType="int" visibility="public"/>
+        <Method name="setEstado" returnType="void" visibility="public">
+          <Argument type="State" name="estado"/>
+        </Method>
+        <Method name="regista" returnType="void" visibility="public"/>
+        <Method name="requisita" returnType="void" visibility="public"/>
+        <Method name="reserva" returnType="void" visibility="public"/>
+        <Method name="devolve" returnType="void" visibility="public"/>
+        <Method name="cancela" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Disponivel" package="aula11_03_Sate" visibility="public" xPosition="338.0" yPosition="322.0">
+      <Fields>
+        <Field name="disponivel" type="Disponivel" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstance" returnType="State" visibility="public" isStatic="true"/>
+        <Method name="regista" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="requisita" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="reserva" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="devolve" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="cancela" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Emprestado" package="aula11_03_Sate" visibility="public" xPosition="1392.0" yPosition="149.0">
+      <Fields>
+        <Field name="emprestado" type="Emprestado" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstance" returnType="State" visibility="public" isStatic="true"/>
+        <Method name="regista" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="requisita" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="reserva" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="devolve" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="cancela" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Reservado" package="aula11_03_Sate" visibility="public" xPosition="872.0" yPosition="817.0">
+      <Fields>
+        <Field name="reservado" type="Reservado" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstance" returnType="State" visibility="public" isStatic="true"/>
+        <Method name="regista" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="requisita" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="reserva" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="devolve" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="cancela" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Inventário" package="aula11_03_Sate" visibility="public" xPosition="339.0" yPosition="793.0">
+      <Fields>
+        <Field name="inventario" type="Inventário" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstance" returnType="State" visibility="public" isStatic="true"/>
+        <Method name="regista" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="requisita" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="reserva" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="devolve" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="cancela" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="State" package="aula11_03_Sate" visibility="public" xPosition="915.0" yPosition="571.0">
+      <Methods>
+        <Method name="regista" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="requisita" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="reserva" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="devolve" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+        <Method name="cancela" returnType="void" visibility="public">
+          <Argument type="Livro" name="livro"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="emprestado" source="aula11_03_Sate.Emprestado" target="aula11_03_Sate.Emprestado" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula11_03_Sate.Inventário" target="aula11_03_Sate.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula11_03_Sate.Inventário" target="aula11_03_Sate.State" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula11_03_Sate.State" target="aula11_03_Sate.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="inventario" source="aula11_03_Sate.Inventário" target="aula11_03_Sate.Inventário" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula11_03_Sate.Emprestado" target="aula11_03_Sate.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula11_03_Sate.Reservado" target="aula11_03_Sate.State" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="estado" source="aula11_03_Sate.Livro" target="aula11_03_Sate.State" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula11_03_Sate.Disponivel" target="aula11_03_Sate.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula11_03_Sate.Disponivel" target="aula11_03_Sate.State"/>
+    <HasRelation name="disponivel" source="aula11_03_Sate.Disponivel" target="aula11_03_Sate.Disponivel" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula11_03_Sate.Reservado" target="aula11_03_Sate.State"/>
+    <UseRelation source="aula11_03_Sate.Disponivel" target="aula11_03_Sate.State" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula11_03_Sate.Emprestado" target="aula11_03_Sate.State" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula11_03_Sate.Reservado" target="aula11_03_Sate.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula11_03_Sate.Livro" target="aula11_03_Sate.State" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula11_03_Sate.Emprestado" target="aula11_03_Sate.State"/>
+    <HasRelation name="reservado" source="aula11_03_Sate.Reservado" target="aula11_03_Sate.Reservado" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula11_03_Sate.Inventário" target="aula11_03_Sate.State"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

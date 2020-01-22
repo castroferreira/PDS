@@ -1,0 +1,12 @@
+-> Compõe objetos em estruturas de arvore para representar hierarquias.
+-> Permite que clientes tratem dos objetos individuais e compostos de maneira uniforme
+
+Usar padrão:
+ -> Queremos representar hierarquias
+ -> Queremos que os clientes ignorem as diferenças entre objetos simples e compostos
+
+Vantagens:
+	-> Define hierarquias: objetos podem ser compostos de outros objetos e assim sucessivamente
+	-> Simplifica o cliente: este nao precisa de saber se os objetos são ou não compostos
+	-> Facilita a criação de novos membros
+	-> Pode tornar o objeto mais genérico

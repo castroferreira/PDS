@@ -1,0 +1,30 @@
+-> Este padrão converte a interface de uma classe numa interface esperada pelo cliente.
+-> Permite que as classes com interfaces incompativeis possam colaborar.
+-> É criada uma nova classe que envolva as duas interfaces, juntando as suas funcionalidades.
+-> Adapter para classes - SUBCLASSING
+-> Adapter para objetos - DELEGATIONS
+
+usar o padrão:
+	-> Queremos usar uma classe já pronta que possui uma interface diferente do que precisamos 
+	-> Queremos criar uma classe reutilizavel prevendo situacoes que possam ocorrer no futuro
+
+
+Vantagens:
+	-> Para classes: 
+		- É o mais eficiente
+		- Permite que o adapter subescreva algumas funções do adaptado
+		- Garante um acesso automatico a todos os metodos da superclasse
+
+	-> Para Objetos:
+		- É mais flexivel
+		- Permite renovar os objetos
+		- Os wrappers podem ser adicionados ou removidos automaticamente
+		- Permite o uso de um unico adapter para uma hierarquia de classes adaptadas.
+
+
+Desvantagem:
+	-> Para classes: 
+		- Não funciona bem quando se quer adpatar uma hierarquia de classes
+
+	-> Para objetos:
+		- É mais dificil subescrever funções do adaptado.

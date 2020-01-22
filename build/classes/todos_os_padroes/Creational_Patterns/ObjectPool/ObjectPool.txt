@@ -1,0 +1,6 @@
+-> Utilizado quando queremos reutilizar pos objetos e nao para os eliminar
+-> Depois de verificar se esta na pool, caso esteja, e retornado em vez de criar um novo
+
+Vantagem:
+	-> Evita a extensa aquisicao
+	-> Evita a libertacao de recursos atraves da reciclagem de objetos que nao estao em uso

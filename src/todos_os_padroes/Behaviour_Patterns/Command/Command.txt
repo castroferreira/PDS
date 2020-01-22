@@ -1,0 +1,19 @@
+-> Encapsula um pedido com um objeto permitindo parametrização, suporte histórico,...
+-> O cliente escolhe uma ação que encapsula os dados e o que deve ser executado.
+	- O servidor executa esta ação.
+-> Faz uso de heranca para agrupar classes e obrigar a que todos tenham a mesma interface em comum
+
+Usar padrão: 
+	-> Parametrizar ações genéricas
+	-> Enfileirar e executar comandos de forma assincrona
+	-> permitir o retrocesso de operações (undo)
+	-> Java SWING
+	-> Interfaces graficas
+
+Vantagens:
+	-> Desacoplamento: o objeto que invoca a operação e o que executa são desacoplados
+	-> Extensabilidade: Comandos são objetos. Podem ser usados junto com composite para formar comandos complexos.
+
+Nota:
+	-> É possivel criar novos comandos sem alterar os que já existem.
+	

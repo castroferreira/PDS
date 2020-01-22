@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula03_01_JGalo">
+  <ClassDiagramComponents>
+    <Class name="JGalo" package="aula03_01_JGalo" visibility="public" xPosition="421.0" yPosition="35.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="jPanel" type="JPanel" visibility="private"/>
+        <Field name="bt" type="JToggleButton" visibility="private"/>
+        <Field name="jogo" type="JGaloInterface" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JGaloInterface" name="myGreatGame"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="JogoGaloEngine" package="aula03_01_JGalo" visibility="public" xPosition="419.0" yPosition="507.0">
+      <Fields>
+        <Field name="actualPlayer" type="char" visibility="private"/>
+        <Field name="grid" type="char[][]" visibility="private"/>
+        <Field name="plays" type="int" visibility="private"/>
+        <Field name="TOTAL_PLAYS" type="int" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="finished" type="boolean" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="char" name="initialPlayer"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="changePlayer" returnType="void" visibility="public"/>
+        <Method name="getActualPlayer" returnType="char" visibility="public"/>
+        <Method name="setJogada" returnType="boolean" visibility="public">
+          <Argument type="int" name="lin"/>
+          <Argument type="int" name="col"/>
+        </Method>
+        <Method name="isFinished" returnType="boolean" visibility="public"/>
+        <Method name="checkResult" returnType="char" visibility="public"/>
+        <Method name="searchCombination" returnType="boolean" visibility="private"/>
+        <Method name="checkWinnerSeq" returnType="boolean" visibility="private">
+          <Argument type="String" name="seq"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="JGaloInterface" package="aula03_01_JGalo" visibility="public" xPosition="431.0" yPosition="300.0">
+      <Methods>
+        <Method name="getActualPlayer" returnType="char" visibility="public" isAbstract="true"/>
+        <Method name="setJogada" returnType="boolean" visibility="public" isAbstract="true">
+          <Argument type="int" name="lin"/>
+          <Argument type="int" name="col"/>
+        </Method>
+        <Method name="isFinished" returnType="boolean" visibility="public" isAbstract="true"/>
+        <Method name="checkResult" returnType="char" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="jogo" source="aula03_01_JGalo.JGalo" target="aula03_01_JGalo.JGaloInterface" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula03_01_JGalo.JogoGaloEngine" target="aula03_01_JGalo.JGaloInterface"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

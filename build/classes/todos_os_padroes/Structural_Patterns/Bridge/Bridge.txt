@@ -1,0 +1,15 @@
+-> Desacopla uma abstração da sua implementação para que ambos possam variar independentemente.
+-> Este padrão contém uma interface que vai atuar com ponte:
+	 - Torna a funcionalidade das classes concretas independentes das classes do implementador de interface.
+-> Os tipos de classes podem ser alterados estruturalmente sem se afetarem.
+
+Usar o padrão:
+ 	-> Queremos evitar uma ligação permanente entre a abstração e a implementação.
+ 	-> Tanto a abstração quanto a implmentação possuem subclasses
+ 	-> Mudanças na implementação do codigo não devem afetar o código do cliente.
+
+ Vantagens
+ 	-> Desacopla a implementação
+ 	-> Melhora a extensabilidade:
+		- É possivel extender a implementação e a abstração separadamente
+		- Os clientes não precisam de saber como é a implementação 

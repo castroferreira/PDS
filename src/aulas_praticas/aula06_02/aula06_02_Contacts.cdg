@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula06_02_Contacts">
+  <ClassDiagramComponents>
+    <Class name="ContactsStorage" package="aula06_02_Contacts" visibility="public" xPosition="148.0" yPosition="15.0">
+      <Fields>
+        <Field name="contacts" type="List&lt;Contact&gt;" visibility="private"/>
+        <Field name="contactsStorage" type="ContactsStorageInterface" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ContactsStorageInterface" name="contactsStorage"/>
+        </Constructor>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="openAndLoad" returnType="void" visibility="public">
+          <Argument type="ContactsStorageInterface" name="store"/>
+        </Method>
+        <Method name="saveAndClose" returnType="void" visibility="public"/>
+        <Method name="saveAndClose" returnType="void" visibility="public">
+          <Argument type="ContactsStorageInterface" name="store"/>
+        </Method>
+        <Method name="exist" returnType="boolean" visibility="public">
+          <Argument type="Contact" name="contact"/>
+        </Method>
+        <Method name="getByName" returnType="Contact" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="add" returnType="boolean" visibility="public">
+          <Argument type="Contact" name="contact"/>
+        </Method>
+        <Method name="remove" returnType="boolean" visibility="public">
+          <Argument type="Contact" name="contact"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="aula06_02_Contacts" visibility="public" xPosition="1462.0" yPosition="100.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ContactsTXT" package="aula06_02_Contacts" visibility="public" xPosition="1387.0" yPosition="512.0">
+      <Fields>
+        <Field name="file" type="File" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="filename"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="loadContacts" returnType="List&lt;Contact&gt;" visibility="public"/>
+        <Method name="saveContacts" returnType="boolean" visibility="public">
+          <Argument type="List&lt;Contact&gt;" name="list"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ContactsBIN" package="aula06_02_Contacts" visibility="public" xPosition="1018.0" yPosition="394.0">
+      <Fields>
+        <Field name="file" type="File" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="filename"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="loadContacts" returnType="List&lt;Contact&gt;" visibility="public"/>
+        <Method name="saveContacts" returnType="boolean" visibility="public">
+          <Argument type="List&lt;Contact&gt;" name="list"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Contact" package="aula06_02_Contacts" visibility="public" xPosition="590.0" yPosition="485.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="number"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getNumber" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="ContactsInterface" package="aula06_02_Contacts" visibility="public" xPosition="74.0" yPosition="474.0">
+      <Methods>
+        <Method name="openAndLoad" returnType="void" visibility="public">
+          <Argument type="ContactsStorageInterface" name="store"/>
+        </Method>
+        <Method name="saveAndClose" returnType="void" visibility="public"/>
+        <Method name="saveAndClose" returnType="void" visibility="public">
+          <Argument type="ContactsStorageInterface" name="store"/>
+        </Method>
+        <Method name="exist" returnType="boolean" visibility="public">
+          <Argument type="Contact" name="contact"/>
+        </Method>
+        <Method name="getByName" returnType="Contact" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="add" returnType="boolean" visibility="public">
+          <Argument type="Contact" name="contact"/>
+        </Method>
+        <Method name="remove" returnType="boolean" visibility="public">
+          <Argument type="Contact" name="contact"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="ContactsStorageInterface" package="aula06_02_Contacts" visibility="public" xPosition="1018.0" yPosition="98.0">
+      <Methods>
+        <Method name="loadContacts" returnType="List&lt;Contact&gt;" visibility="public"/>
+        <Method name="saveContacts" returnType="boolean" visibility="public">
+          <Argument type="List&lt;Contact&gt;" name="list"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="aula06_02_Contacts.ContactsTXT" target="aula06_02_Contacts.Contact" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula06_02_Contacts.ContactsTXT" target="aula06_02_Contacts.ContactsStorageInterface"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula06_02_Contacts.ContactsBIN" target="aula06_02_Contacts.ContactsStorageInterface"/>
+    <UseRelation source="aula06_02_Contacts.ContactsInterface" target="aula06_02_Contacts.Contact" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula06_02_Contacts.ContactsBIN" target="aula06_02_Contacts.Contact" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="contacts" source="aula06_02_Contacts.ContactsStorage" target="aula06_02_Contacts.Contact" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Contact&gt;"/>
+    <UseRelation source="aula06_02_Contacts.ContactsStorage" target="aula06_02_Contacts.Contact" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula06_02_Contacts.ContactsStorage" target="aula06_02_Contacts.ContactsInterface"/>
+    <HasRelation name="contactsStorage" source="aula06_02_Contacts.ContactsStorage" target="aula06_02_Contacts.ContactsStorageInterface" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula06_02_Contacts.ContactsStorageInterface" target="aula06_02_Contacts.Contact" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

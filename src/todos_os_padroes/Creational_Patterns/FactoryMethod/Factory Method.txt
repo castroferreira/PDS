@@ -1,0 +1,14 @@
+-> Este padrão define uma interface para a criação de objetos mas deixa as subclasses decidirem qual a classe a instanciar
+-> o método fabrica é definido na superclasse e implementado na subclasse
+
+Usar o padrão:
+	-> Uma classe não tem como saber a classe dos objetos que vai precisar de criar.
+	-> uma classe quer que as subclasses especifiquem o objeto a ser criado
+
+Vantagem:
+	-> Melhor extensibilidade: Não é necessario saber a classe concreta do objeto para criá-lo.
+
+Desvantagem:
+	-> Obrigatoriedade da subclasse fábrica: não é possivel criar somente um produto novo sem fábrica.   
+
+

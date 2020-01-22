@@ -1,0 +1,16 @@
+-> Este padrão fornece uma interface unificada para um conjunto de interfaces de um sistema.
+-> Esta interface ajuda o cliente a usar o sistema e oculta a complexidade deste.
+-> Envolve uma unica classe que fornece métodos simplificados exigidos pelos clientes e chama os métodos de classes já existentes.
+
+Usar o padrão:
+	-> Queremos fornecer uma interface simples para um subsitema complexo.
+	-> Diminuir a dependência direta entre o cliente e as classes internas do sistema.
+	-> Desenvolver o sistema em multiplas camadas cada uma com uma façade.
+
+Vantagens:
+	-> Facilita a utilização do sistema: o cliente apenas precisa de conhecer a façade
+	-> Promove o baixo acoplamento: quando existe pequenas alterações no sistema, não afeta o cliente.
+	-> Versatilidade: Quando for necessario o cliente pode aceder ao subsistema diretamente
+
+Nota:
+	-> Este padrão normalmente é implementado como singleton

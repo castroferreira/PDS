@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula06_EmpresaPst">
+  <ClassDiagramComponents>
+    <Class name="Registos_Adapter" package="aula06_EmpresaPst" visibility="public" xPosition="950.0" yPosition="474.0">
+      <Fields>
+        <Field name="registos" type="Registos" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Registos" name="registos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addEmployee" returnType="boolean" visibility="public">
+          <Argument type="Employee" name="employee"/>
+        </Method>
+        <Method name="deleteEmployee" returnType="void" visibility="public">
+          <Argument type="long" name="emp_num"/>
+        </Method>
+        <Method name="getEmployees" returnType="List&lt;Employee&gt;" visibility="public"/>
+        <Method name="isEmployee" returnType="boolean" visibility="public">
+          <Argument type="long" name="emp_num"/>
+        </Method>
+        <Method name="empregadoToEmployee" returnType="Employee" visibility="private">
+          <Argument type="Empregado" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Merge_PST" package="aula06_EmpresaPst" visibility="public" xPosition="849.0" yPosition="23.0">
+      <Fields>
+        <Field name="db_original" type="Merge_Database_Registos" visibility="private"/>
+        <Field name="db_secundaria" type="Merge_Database_Registos[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Merge_Database_Registos" name="db_original"/>
+          <Argument type="Merge_Database_Registos[]" name="db_secundaria"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addEmployee" returnType="boolean" visibility="public">
+          <Argument type="Employee" name="employee"/>
+        </Method>
+        <Method name="deleteEmployee" returnType="void" visibility="public">
+          <Argument type="long" name="emp_num"/>
+        </Method>
+        <Method name="getEmployees" returnType="List&lt;Employee&gt;" visibility="public"/>
+        <Method name="isEmployee" returnType="boolean" visibility="public">
+          <Argument type="long" name="emp_num"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="aula06_EmpresaPst" visibility="public" xPosition="345.0" yPosition="65.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="printEmployees" returnType="void" visibility="private" isStatic="true">
+          <Argument type="Merge_PST" name="pst"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Registos" package="aula06_EmpresaPst" visibility="public" xPosition="1263.0" yPosition="1021.0">
+      <Fields>
+        <Field name="empregados" type="ArrayList&lt;Empregado&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="insere" returnType="void" visibility="public">
+          <Argument type="Empregado" name="emp"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="isEmpregado" returnType="boolean" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="listaDeEmpregados" returnType="List&lt;Empregado&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Database" package="aula06_EmpresaPst" visibility="public" xPosition="2432.0" yPosition="1029.0">
+      <Fields>
+        <Field name="employees" type="Vector&lt;Employee&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addEmployee" returnType="boolean" visibility="public">
+          <Argument type="Employee" name="employee"/>
+        </Method>
+        <Method name="deleteEmployee" returnType="void" visibility="public">
+          <Argument type="long" name="emp_num"/>
+        </Method>
+        <Method name="getAllEmployees" returnType="Employee[]" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Employee" package="aula06_EmpresaPst" visibility="public" xPosition="1816.0" yPosition="1012.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="emp_num" type="long" visibility="private"/>
+        <Field name="salary" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="long" name="emp_num"/>
+          <Argument type="double" name="salary"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getEmpNum" returnType="long" visibility="public"/>
+        <Method name="getSalary" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Empregado" package="aula06_EmpresaPst" visibility="public" xPosition="583.0" yPosition="995.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="apelido" type="String" visibility="private"/>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="salario" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="apelido"/>
+          <Argument type="int" name="codigo"/>
+          <Argument type="double" name="salario"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="apelido" returnType="String" visibility="public"/>
+        <Method name="nome" returnType="String" visibility="public"/>
+        <Method name="codigo" returnType="int" visibility="public"/>
+        <Method name="salario" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Database_Adapter" package="aula06_EmpresaPst" visibility="public" xPosition="2148.0" yPosition="639.0">
+      <Fields>
+        <Field name="database" type="Database" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Database" name="database"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addEmployee" returnType="boolean" visibility="public">
+          <Argument type="Employee" name="employee"/>
+        </Method>
+        <Method name="deleteEmployee" returnType="void" visibility="public">
+          <Argument type="long" name="emp_num"/>
+        </Method>
+        <Method name="getEmployees" returnType="List&lt;Employee&gt;" visibility="public"/>
+        <Method name="isEmployee" returnType="boolean" visibility="public">
+          <Argument type="long" name="emp_num"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Merge_Database_Registos" package="aula06_EmpresaPst" visibility="public" xPosition="1676.0" yPosition="43.0">
+      <Methods>
+        <Method name="addEmployee" returnType="boolean" visibility="public">
+          <Argument type="Employee" name="employee"/>
+        </Method>
+        <Method name="deleteEmployee" returnType="void" visibility="public">
+          <Argument type="long" name="emp_num"/>
+        </Method>
+        <Method name="getEmployees" returnType="List&lt;Employee&gt;" visibility="public"/>
+        <Method name="isEmployee" returnType="boolean" visibility="public">
+          <Argument type="long" name="emp_num"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="database" source="aula06_EmpresaPst.Database_Adapter" target="aula06_EmpresaPst.Database" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="registos" source="aula06_EmpresaPst.Registos_Adapter" target="aula06_EmpresaPst.Registos" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula06_EmpresaPst.Registos_Adapter" target="aula06_EmpresaPst.Empregado" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula06_EmpresaPst.Database_Adapter" target="aula06_EmpresaPst.Merge_Database_Registos"/>
+    <UseRelation source="aula06_EmpresaPst.Database_Adapter" target="aula06_EmpresaPst.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula06_EmpresaPst.Registos_Adapter" target="aula06_EmpresaPst.Merge_Database_Registos"/>
+    <UseRelation source="aula06_EmpresaPst.Database" target="aula06_EmpresaPst.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="empregados" source="aula06_EmpresaPst.Registos" target="aula06_EmpresaPst.Empregado" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Empregado&gt;"/>
+    <UseRelation source="aula06_EmpresaPst.Merge_PST" target="aula06_EmpresaPst.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula06_EmpresaPst.Registos_Adapter" target="aula06_EmpresaPst.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula06_EmpresaPst.Merge_Database_Registos" target="aula06_EmpresaPst.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula06_EmpresaPst.Registos" target="aula06_EmpresaPst.Empregado" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula06_EmpresaPst.Merge_PST" target="aula06_EmpresaPst.Merge_Database_Registos"/>
+    <HasRelation name="employees" source="aula06_EmpresaPst.Database" target="aula06_EmpresaPst.Employee" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="db_original" source="aula06_EmpresaPst.Merge_PST" target="aula06_EmpresaPst.Merge_Database_Registos" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula06_EmpresaPst.Main" target="aula06_EmpresaPst.Merge_PST" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

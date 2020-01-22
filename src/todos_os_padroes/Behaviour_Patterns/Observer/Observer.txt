@@ -1,0 +1,16 @@
+-> Define uma dependencia one-to-many entre os objetos.
+-> Implementa a parte do View do MVC.
+-> Sempre que um objeto muda de estado, os outros são notificados e atualizados.
+-> Se um objeto for modificado (mudar de estado), os objetos dependentes (observers) têm de ser notificados e atualizados automaticamente
+-> O padrao divide-se em dois aspetos (subjects e observers)
+
+Usar padrão: 
+	-> uma abastração possui 2 aspetos e é necessario separá-los em dois objetos para variá-los;
+	-> alterações num objeto necessita de atualizações em vários outros objetos não-determinados.
+	-> um objeto precisa de notificar sobre alterações em outros objetos que, a principio, ele não conhece.
+
+Vantagem:
+	-> Flexibilidade: 
+		- Observável e observador pode ser quaisquer objetos
+		- Baixo Acoplamento entre os objetos
+		- Objetos podem ser observadores de outros (modo cascata)

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="aula05_02_EmentasUA">
+  <ClassDiagramComponents>
+    <Class name="Main" package="aula05_02_EmentasUA" visibility="public" xPosition="53.0" yPosition="698.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LunchDirector" package="aula05_02_EmentasUA" visibility="public" xPosition="53.0" yPosition="130.0">
+      <Fields>
+        <Field name="lunch" type="LunchBuilder" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="LunchBuilder" name="lunch"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMeal" returnType="Lunch" visibility="public"/>
+        <Method name="constructMeal" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="Lunch" package="aula05_02_EmentasUA" visibility="public" xPosition="464.0" yPosition="130.0">
+      <Fields>
+        <Field name="drink" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="drink"/>
+          <Argument type="String" name="mainCourse"/>
+          <Argument type="String" name="side"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDrink" returnType="String" visibility="public"/>
+        <Method name="getMainCourse" returnType="String" visibility="public"/>
+        <Method name="getSide" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CrastoLunchlBuilder" package="aula05_02_EmentasUA" visibility="public" xPosition="1041.0" yPosition="130.0">
+      <Fields>
+        <Field name="drink" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buildDrink" returnType="void" visibility="public"/>
+        <Method name="buildMainCourse" returnType="void" visibility="public"/>
+        <Method name="buildSide" returnType="void" visibility="public"/>
+        <Method name="getMeal" returnType="Lunch" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CentralCantineLunchBuilder" package="aula05_02_EmentasUA" visibility="public" xPosition="802.0" yPosition="446.0">
+      <Fields>
+        <Field name="drink" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buildDrink" returnType="void" visibility="public"/>
+        <Method name="buildMainCourse" returnType="void" visibility="public"/>
+        <Method name="buildSide" returnType="void" visibility="public"/>
+        <Method name="getMeal" returnType="Lunch" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SnackLunchBuilder" package="aula05_02_EmentasUA" visibility="public" xPosition="551.0" yPosition="630.0">
+      <Fields>
+        <Field name="drink" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buildDrink" returnType="void" visibility="public"/>
+        <Method name="buildMainCourse" returnType="void" visibility="public"/>
+        <Method name="buildSide" returnType="void" visibility="public"/>
+        <Method name="getMeal" returnType="Lunch" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="LunchBuilder" package="aula05_02_EmentasUA" visibility="public" xPosition="302.0" yPosition="446.0">
+      <Methods>
+        <Method name="buildDrink" returnType="void" visibility="public"/>
+        <Method name="buildMainCourse" returnType="void" visibility="public"/>
+        <Method name="buildSide" returnType="void" visibility="public"/>
+        <Method name="getMeal" returnType="Lunch" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula05_02_EmentasUA.CrastoLunchlBuilder" target="aula05_02_EmentasUA.LunchBuilder"/>
+    <UseRelation source="aula05_02_EmentasUA.LunchBuilder" target="aula05_02_EmentasUA.Lunch" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula05_02_EmentasUA.CentralCantineLunchBuilder" target="aula05_02_EmentasUA.Lunch" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula05_02_EmentasUA.LunchDirector" target="aula05_02_EmentasUA.Lunch" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="aula05_02_EmentasUA.CrastoLunchlBuilder" target="aula05_02_EmentasUA.Lunch" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="lunch" source="aula05_02_EmentasUA.LunchDirector" target="aula05_02_EmentasUA.LunchBuilder" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula05_02_EmentasUA.CentralCantineLunchBuilder" target="aula05_02_EmentasUA.LunchBuilder"/>
+    <UseRelation source="aula05_02_EmentasUA.SnackLunchBuilder" target="aula05_02_EmentasUA.Lunch" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="aula05_02_EmentasUA.SnackLunchBuilder" target="aula05_02_EmentasUA.LunchBuilder"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

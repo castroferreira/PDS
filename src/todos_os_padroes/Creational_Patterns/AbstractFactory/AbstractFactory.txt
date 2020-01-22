@@ -1,0 +1,15 @@
+-> Este padrão trabalha em torno de uma super fábrica que cria outras fábricas.
+-> Cria uma interface que é responsável por criar uma fábrica de objetos relacionados sem especificar explicitamente as suas classes.
+
+usar este padrão:
+	-> O sistema tiver de ser independente de como so seus produtos são criados, compostos ou representados.
+        -> Sempre que for necessário construir uma biblioteca de produtos
+        -> Pretender revelar apenas as interfacese não as implementações
+
+Vantages:
+	-> Isola classes concretas: o cliente so conhece as interfaces.
+	-> Facilita a troca de familias de classes: troca de fábrica concreta
+	-> Promove a consistência interna: não dá para usar um produto de um familia com o de outra.
+
+Desvantagens:
+	-> A criação de novos objetos é trabalhosa: é necessario fazer a alteração das implementações de todas as fábricas para suportar o novo produto.

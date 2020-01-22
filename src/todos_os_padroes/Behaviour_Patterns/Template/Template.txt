@@ -1,0 +1,14 @@
+-> Define o esqueleto de um algoritmo de uma classe.
+-> Permite que as subclasses redefinam determinadas etapas de um algoritmo sem alterar a sua estrutura
+-> Os modelos abstratos sao implementados nas classes derivadas, adequado às "regras", de forma a evitar codigo duplicado
+
+Usar padrão: 
+	-> Implementar partes variantes de um algoritmo na superclasse e deixar o restante para as subclasses.
+	-> Comportamento comum de subclasses tem de ser generalizado, ou seja, evitar codigo duplicado.
+	-> Comportamentos (interfaces) e caracteristicas (classes abstratas) em comum
+	-> Desenvolver plataformas graficas online (jogos)
+
+Vantagens:
+	-> Reuso de código: partes do código são reutilizáveis por todas as subclasses.
+	-> Controle
+	-> Comportamento padrão extensível

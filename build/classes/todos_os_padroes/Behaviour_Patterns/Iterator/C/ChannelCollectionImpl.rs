@@ -1,0 +1,2 @@
+behavioralPatterns.Iterator.ChannelCollectionImpl$ChannelIteratorImpl
+behavioralPatterns.Iterator.ChannelCollectionImpl

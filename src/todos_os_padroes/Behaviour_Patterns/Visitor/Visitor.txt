@@ -1,0 +1,6 @@
+-> Permite que uma operacao seja executada em objetos de uma determinada classe com outra classe
+-> É dificil de adicionar novas operacoes mas se adicionarmos um visitor
+	- Conseguimos definir uma nova operacao sem alterar as classes dos elementos que opera.
+
+-> Usar o padrao:
+	-> Quando uma estrutura de objetos contem muitas classes em operacoes diferentes

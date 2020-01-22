@@ -1,0 +1,1 @@
+behavioralPatterns.Interpreter.AndExpression
